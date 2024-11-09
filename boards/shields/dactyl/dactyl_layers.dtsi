@@ -58,6 +58,7 @@ coding_layer2{
 &trans   &none               &none                       &as RA(N7) RA(MINUS) &as RA(N0) LS(N7) &none                  &kp N0              &kp N1     &kp N2       &kp N3      &as COMMA DOT  &kp LC(FSLH)
                              &none           &none                &kp LALT          &mo l_L     &none                   &none       &lt l_R SPACE        &caps_word           &kp COMMA       &kp DOT
                                                                                     &none           &none                                  &bootloader        &none
+    >;
  };
 
     both_layer {
