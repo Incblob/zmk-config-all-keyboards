@@ -2,7 +2,7 @@ default_layer {
         bindings = <
 &kp LSHIFT  AS(Q) AS(W) AS(F) AS(P) AS(B)                                                 AS(J)      AS(L)   AS(U)      AS(Z)      AS(NON_US_HASH)  &as LC(G) LC(F)
 AS(TAB)     AS(A) AS(R) AS(S) AS(T) AS(G)                                                 AS(M)      AS(N)   AS(E)      AS(I)      AS(O)            AS(RET)
-&kp LCTRL   AS(Y) AS(X) AS(C) AS(D) AS(V)                                                 AS(K)      AS(H)   AS(COMMA)  AS(DOT)    &kp DOWN         &kp RIGHT
+&kp LCTRL   AS(Y) AS(X) AS(C) AS(D) AS(V)                                                 AS(K)      AS(H)   &td_comma  &td_dot    &kp DOWN         &kp RIGHT
             &kp LGUI   &kp LG(LS(S))    &mt LALT ESC &lt l_L SPACE &kp BSPC     &mt LSHIFT DELETE   &lt l_R SPACE   AS(FSLH)    &kp LEFT  &kp UP
                                         &kp LS(LC(LALT)) &mt LS(F12) F12              &mt LS(LA(LC(LGUI))) K_APP   &caps_word
         >;
