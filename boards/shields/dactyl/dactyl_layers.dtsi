@@ -12,7 +12,7 @@ coding_layer1{
         bindings = <
 &trans &trans &trans &trans &trans &trans       &trans &trans &trans    &trans &trans &trans
 &trans &trans &trans &trans &trans &trans       &trans &trans &trans    &trans &trans &trans
-&trans &trans &trans &trans &trans &trans       &trans &trans AS(COMMA) AS(DOT) &trans &trans
+&trans &trans &trans &trans &trans &trans       &trans &trans &trans    AS(DOT) &trans &trans
        &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans
                                         &trans &trans 
         >;
@@ -33,7 +33,7 @@ coding_layer1{
 coding_layer2{
         bindings = <
 &trans &trans &trans &trans &trans &trans       &trans    AS(DOT) &trans &trans &trans &trans 
-&trans &trans &trans &trans &trans &trans       AS(COMMA) &trans  &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans       &trans    &trans  &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans       &trans    &trans  &trans &trans &trans &trans
        &trans &trans &trans &trans &trans       &trans    &trans  &trans &trans &trans
                                 &trans &trans &trans &trans 

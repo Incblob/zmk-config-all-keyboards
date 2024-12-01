@@ -71,7 +71,7 @@ behaviors {
     
     mt_dot: mt_dot {
             my_lk_config;
-            bindings = <&colon_space_cap>, <&dot_space_cap>;
+            bindings = <&colon_space>, <&dot_space_cap>;
         };
 
     td_comma: td_comma {
