@@ -25,13 +25,13 @@ macros {
 
 
 // Formatting/ whitespace
-#define SPACE_MACRO(NAME, KEY){\
+#define SPACE_MACRO(NAME, KEY)\
         ZMK_MACRO(NAME, \
         wait-ms = <MACRO_WAIT>; \
         tap-ms = <MACRO_TAP_Q>; \
         bindings = < &kp KEY &kp SPACE>; \
     ) \
-};
+
     SPACE_MACRO(comma_space, COMMA)
     SPACE_MACRO(semi_space, LS(COMMA))
     SPACE_MACRO(colon_space, LS(DOT))
