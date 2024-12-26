@@ -23,7 +23,7 @@ coding_layer1{
     bindings = <    
 &trans  AS(X)  AS(W)  &ak_m  &ak_g  &ak_j                  &none           &td_dot  &td_qu  AS(Y)   AS(F)  &trans
 &trans  AS(S)  &ak_c  AS(N) AS(T) &ak_k                  &td_comma       AS(A)   AS(E)    AS(I)   &ak_h  &trans
-&trans  A&ak_b  AS(P)  AS(L) AS(D) AS(V)                  AS(NON_US_HASH) &ak_u   AS(O)    AS(Z)   &trans &trans
+&trans  &ak_b  AS(P)  AS(L) AS(D) AS(V)                  AS(NON_US_HASH) &ak_u   AS(O)    AS(Z)   &trans &trans
             &trans  &trans &trans &lt l_L R &trans      &trans &trans  &trans &trans &trans
                                 &trans  &trans &trans &trans
     >;
