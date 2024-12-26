@@ -1,4 +1,5 @@
 #define my_tapping_term 125
+#define ak_idle_term 200
 
 #define TD_template compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <200>
 
