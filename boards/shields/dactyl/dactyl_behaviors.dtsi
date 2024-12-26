@@ -111,8 +111,94 @@ behaviors {
         bindings = <&macro_ght>, <&macro_Gh>;
     };
 
-    //
-    // linger keys
-    //
+// Adaptive Keys
+
+    // M turns to L After X,W,G. 
+    // G turns previous to L for M. MG->GL
+    // G turns to L before and after K, GK->LK KG->KL
+    // J expands G -> GTH,
+    // H switches row for A,U,E,O
+    // B and C -> BS, SB  B stands for S
+    // B after P -> PS
+    // C after T expands -> TCH
+    // TK turns to C before K -> CK
+    // U turns to I after Y (de)  
+
+
+    ak_m: ak_m { // becomes L M->L: for G,X,W
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(M)>;
+
+        akt_gm { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; };
+        akt_xm { trigger-keys = <X>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp X &kp L>; };
+        akt_wm { trigger-keys = <W>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; };
+    };
+
+    ak_h: ak_h { // switches top and bottom row: A<-H->U,E<-H->O
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(H)>;
+
+        akt_ah { trigger-keys = <A>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp U>; };
+        akt_uh { trigger-keys = <U>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp A>; };
+        akt_eh { trigger-keys = <E>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp O>; };
+        akt_oh { trigger-keys = <O>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp E>; };
+    };
+
+    ak_b: ak_b { // raises to PB->PS. BC -> BS, CB->SB
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(B)>;
+
+        akt_pb { trigger-keys = <P>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp S>; };
+        akt_cb { trigger-keys = <C>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp S &kp B>; };
+    };
+
+    ak_c: ak_c { // expands TC-> TCH, CB->SB (see above)
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(C)>;
+
+        akt_tc { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp C &kp H>; };
+        akt_bc { trigger-keys = <B>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp S>; };
+    };
+
+    ak_g: ak_g { // MG -> LG,  KG -> KL, JPG macro, 
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(G)>;
+
+        akt_mg { trigger-keys = <M>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp L &kp G>; };
+        akt_kg { trigger-keys = <K>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; };
+        akt_jg { trigger-keys = <J>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp P &kp G>; }; //jpg
+    };
+
+    ak_j: ak_j { // expands GJ-> GTH, WJ->WL
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(J)>;
+
+        akt_gj { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp T &kp H>; };
+        akt_wj { trigger-keys = <W>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; };
+    };
+
+    ak_k: ak_k { // GK->LK, TK->CK
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(K)>;
+
+        akt_gk { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp L &kp K>; };
+        akt_tk { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp C &kp K >; };
+    };
+
+    ak_u: ak_u {// YU-> YI
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(U)>;
+
+        akt_yu { trigger-keys = <Z>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp I>; };
+    };
+
 
 };

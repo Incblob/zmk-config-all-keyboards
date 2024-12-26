@@ -21,9 +21,9 @@ coding_layer1{
 
  handsdown {
     bindings = <    
-&trans  AS(X)  AS(W)  AS(M) AS(G) AS(J)                  &none           &td_dot  &td_qu  AS(Y)   AS(F)  &trans
-&trans  AS(S)  AS(C)  AS(N) AS(T) AS(K)                  &td_comma       AS(A)   AS(E)    AS(I)   AS(H)  &trans
-&trans  AS(B)  AS(P)  AS(L) AS(D) AS(V)                  AS(NON_US_HASH) AS(U)   AS(O)    AS(Z)   &trans &trans
+&trans  AS(X)  AS(W)  &ak_m  &ak_g  &ak_j                  &none           &td_dot  &td_qu  AS(Y)   AS(F)  &trans
+&trans  AS(S)  &ak_c  AS(N) AS(T) &ak_k                  &td_comma       AS(A)   AS(E)    AS(I)   &ak_h  &trans
+&trans  A&ak_b  AS(P)  AS(L) AS(D) AS(V)                  AS(NON_US_HASH) &ak_u   AS(O)    AS(Z)   &trans &trans
             &trans  &trans &trans &lt l_L R &trans      &trans &trans  &trans &trans &trans
                                 &trans  &trans &trans &trans
     >;
@@ -42,13 +42,14 @@ coding_layer2{
 };
     left_layer {
         bindings = <
-&kp LC(X)            AS(SQT)     AS(MINUS)  AS(SEMI)      AS(LBKT)         &kp RA(RBKT)       &none          &none       &kp UP     &kp LS(MINUS) &as EQUAL LS(EQUAL) &kp LS(KP_PLUS)
-&kp LC(C)            &kp LSHIFT  &kp LS(N1) &kp RA(Q)     &kp LS(N6)       &kp LS(N5)         &kp PAGE_UP    &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(RBKT)        &none
-&as LS(LC(V)) LC(V)  &kp LCTRL   &kp GRAVE  &trans        &kp LC(LS(TAB))  &kp LC(TAB)        &kp PAGE_DOWN  &kp LS(N4)  &kp RA(E)  &kp LS(N3)    &trans              &none
+&kp LC(X)            AS(de_ae)     AS(de_s)  AS(de_oe)      AS(de_ue)       &kp de_til       &none          &sel_word       &kp UP     &kp s_que AS(s_gra) &kp LS(KP_PLUS)
+&kp LC(C)            &kp LSHIFT  &kp s_exl  &kp s_at      &kp s_amp       &kp s_per         &kp PAGE_UP    &kp LEFT    &kp DOWN   &kp RIGHT     &kp s_ast        &none
+&as LS(LC(V)) LC(V)  &kp LCTRL   &kp GRAVE  &trans        &kp LC(LS(TAB))  &kp LC(TAB)        &kp PAGE_DOWN  &kp s_dol  &kp s_eur &kp s_sec    &trans              &none
                     &kp RET    &kp LC(B)    &kp LC(LS(P))  &trans        &kp LSHIFT           &trans         &mo l_R     &kp LALT   &trans        &trans
                                                     &sys_reset   &bootloader                      &none       &none
     >; 
-    };
+    }
+
 
 
     right_layer {
