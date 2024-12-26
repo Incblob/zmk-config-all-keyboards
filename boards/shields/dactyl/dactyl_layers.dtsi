@@ -48,9 +48,7 @@ coding_layer2{
                     &kp RET    &kp LC(B)    &kp LC(LS(P))  &trans        &kp LSHIFT           &trans         &mo l_R     &kp LALT   &trans        &trans
                                                     &sys_reset   &bootloader                      &none       &none
     >; 
-    }
-
-
+    }; 
 
     right_layer {
         bindings = <
