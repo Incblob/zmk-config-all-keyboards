@@ -62,7 +62,7 @@ coding_layer2{
 
     both_layer {
         bindings = <
-&sl l_FUNK &none  &none         &none  &kp C_PP      &kp C_VOL_UP        &bt BT_CLR &line_select      &kp LC(HOME)  &kp LS(END)         &to l_CODE     &to l_ALPHA
+&sl l_FUNC &none  &none         &none  &kp C_PP      &kp C_VOL_UP        &bt BT_CLR &line_select      &kp LC(HOME)  &kp LS(END)         &to l_CODE     &to l_ALPHA
 &none      &none  &mt LC(F2) F2 &none  &none         &kp C_VOL_DN        &none      &kp LS(LC(LEFT))  &kp LC(END)   &kp LS(LC(RIGHT))   &to l_HD_CODE  &to l_HD
 &obs_link  &none  &none     &none  &kp LA(LEFT)  &kp LA(RIGHT)       &none      &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3   &bt BT_SEL 4
                         &none   &none     &none  &trans &none           &none  &trans  &none &none  &none
