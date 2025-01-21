@@ -1,29 +1,19 @@
 default_layer {
         bindings = <
-&ss LSHFT LSHFT AS(Q) AS(W) AS(F) AS(P) AS(B)                                                 AS(J)      AS(L)   AS(U)      AS(Z)      AS(NON_US_HASH)  &as LC(G) LC(F)
-AS(TAB)         AS(A) AS(R) AS(S) AS(T) AS(G)                                                 AS(M)      AS(N)   AS(E)      AS(I)      AS(O)            AS(RET)
-&kp LCTRL       AS(Y) AS(X) AS(C) AS(D) AS(V)                                                 AS(K)      AS(H)   &td_comma  &td_dot    &kp DOWN         &kp RIGHT
+&ss LSHFT LSHFT AS(Q) AS(W) AS(F) AS(P) AS(B)                                                 AS(J)      AS(L)   AS(U)      AS(Z)      &ak_apo      &as LC(G) LC(F)
+AS(TAB)         AS(A) AS(R) AS(S) AS(T) AS(G)                                                 AS(M)      AS(N)   AS(E)      AS(I)      AS(O)        AS(RET)
+&kp LCTRL       AS(Y) AS(X) AS(C) AS(D) AS(V)                                                 AS(K)      AS(H)   AS(COMMA)  AS(DOT)    &kp DOWN     &kp RIGHT
                 &kp LGUI   &kp LG(LS(S))    &mt LALT ESC &lt l_L SPACE &kp BSPC     &mt LSHIFT DELETE   &lt l_R SPACE   AS(FSLH)    &kp LEFT  &kp UP
-                                        &kp LS(LC(LALT)) &mt LS(F12) F12              &mt LS(LA(LC(LGUI))) K_APP   &caps_word
+                                        &kp LS(LC(LALT)) &mt AS(F12)              &mt LS(LA(LC(LGUI))) K_APP   &caps_word
         >;
     };
 
-coding_layer1{
-        bindings = <
-&trans &trans &trans &trans &trans &trans       &trans &trans &trans    &trans &trans &trans
-&trans &trans &trans &trans &trans &trans       &trans &trans &trans    &trans &trans &trans
-&trans &trans &trans &trans &trans &trans       &trans &trans &trans    AS(DOT) &trans &trans
-       &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans
-                                        &trans &trans 
-        >;
-
-};
 
  handsdown {
     bindings = <    
-&trans  AS(X)  AS(W)  &ak_m &ak_g &ak_j                  &none           &td_dot &td_qu  AS(Y)   AS(F)  &trans
-&trans  AS(S)  &ak_c  AS(N) AS(T) &ak_k                  &td_comma       AS(A)   AS(E)   AS(I)   &ak_h  &trans
-&trans  &ak_b  AS(P)  AS(L) AS(D) AS(V)                  AS(NON_US_HASH) &ak_u   AS(O)   AS(Z)   &trans &trans
+&trans  &ak_x  AS(W)  &ak_m &ak_g &ak_j                  &none     &td_dot &td_qu  AS(Y)   AS(F)  &trans
+&trans  AS(S)  &ak_c  AS(N) AS(T) &ak_k                  &td_comma AS(A)   AS(E)   AS(I)   &ak_h  &trans
+&trans  &ak_b  AS(P)  AS(L) AS(D) AS(V)                  &ak_apo   &ak_u   AS(O)   AS(Z)   &trans &trans
             &trans  &trans &trans &lt l_L R &trans  &trans &trans  &trans &trans &trans
                                 &trans  &trans              &trans &trans
     >;
@@ -42,10 +32,10 @@ coding_layer2{
 };
     left_layer {
         bindings = <
-&kp LC(X)            AS(de_ae)   AS(de_s)   AS(de_oe)     AS(de_ue)       &kp de_til        &none          &sel_word   &kp UP     &kp s_que     AS(s_gra)      &kp LS(KP_PLUS)
-&kp LC(C)            &kp LSHIFT  &kp s_exl  &kp s_at      &kp s_amp       &kp s_per         &kp PAGE_UP    &kp LEFT    &kp DOWN   &kp RIGHT     &kp s_ast     &none
-&as LS(LC(V)) LC(V)  &kp LCTRL   &kp GRAVE  &trans        &kp LC(LS(TAB))  &kp LC(TAB)      &kp PAGE_DOWN  &kp s_dol   &kp s_eur  &kp s_sec     &trans         &none
-                    &kp RET    &kp LC(B)    &kp LC(LS(P))  &trans        &kp LSHIFT         &trans         &mo l_R     &kp LALT   &trans        &trans
+&kp LC(X)  AS(de_ae)   AS(de_s)   AS(de_oe)     AS(de_ue)       &kp de_til        &none          &sel_word   &kp UP     &kp s_que     AS(s_gra)      &kp LS(KP_PLUS)
+&kp LC(C)  &kp LSHIFT  &kp s_exl  &kp s_at      &kp s_amp       &kp s_per         &kp PAGE_UP    &kp LEFT    &kp DOWN   &kp RIGHT     &kp s_ast     &none
+AS(LC(V))  &kp LCTRL   &kp GRAVE  &trans        &kp LC(LS(TAB))  &kp LC(TAB)      &kp PAGE_DOWN  &kp s_dol   &kp s_eur  &kp s_sec     &trans         &none
+                     AS(LC(Y))   &kp LC(A)    &kp LC(LS(P))  &trans        &kp LSHIFT         &trans         &mo l_R     &kp LALT   &trans        &trans
                                                     &sys_reset   &bootloader                      &none       &none
     >; 
     }; 
@@ -62,9 +52,9 @@ coding_layer2{
 
     both_layer {
         bindings = <
-&sl l_FUNC &none  &none         &none  &kp C_PP      &kp C_VOL_UP        &bt BT_CLR &line_select      &kp LC(HOME)  &kp LS(END)         &to l_CODE     &to l_ALPHA
-&unstuck      &none  &mt LC(F2) F2 &none  &none         &kp C_VOL_DN        &none      &kp LS(LC(LEFT))  &kp LC(END)   &kp LS(LC(RIGHT))   &to l_HD_CODE  &to l_HD
-&obs_link  &none  &none     &none  &kp LA(LEFT)  &kp LA(RIGHT)       &none      &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3   &bt BT_SEL 4
+&sl l_FUNC &none  &none         &none  &kp C_PP      &kp C_VOL_UP        &bt BT_CLR &line_select      &kp LC(HOME)  &kp LS(END)         &none       &to l_ALPHA
+&unstuck   &none  &mt LC(F2) F2 &none  &none         &kp C_VOL_DN        &none      &kp LS(LC(LEFT))  &kp LC(END)   &kp LS(LC(RIGHT))   &tog l_HD_CODE  &to l_HD
+&obs_link  &none  &none         &none  &kp LA(LEFT)  &kp LA(RIGHT)       &none      &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3   &bt BT_SEL 4
                         &none   &none     &none  &trans &none           &none  &trans  &none &none  &none
                                              &none  &none        &none     &none
         >;
@@ -76,6 +66,6 @@ coding_layer2{
 &kp LSHIFT  &kp N1      &kp N2    &kp N3      &kp N4     &kp N5                              &kp CAPSLOCK &none   &none    &none    &none    &none
 &kp LCTRL   &kp N6      &kp N7    &kp N8      &kp N9     &kp N0                              &none         &none   &none    &none    &none    &none
                         &none     &kp TAB     &kp LALT   &kp F5    &as F11 F10        &none  &none     &kp RALT    &none       &none
-                                                &to l_ALPHA   &as LC(LS(F5)) LS(F5)     &none   &none
+                                                &to l_ALPHA   AS(LS(F5))            &none   &none
         >;
     };
