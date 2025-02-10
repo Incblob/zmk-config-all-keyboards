@@ -4,13 +4,13 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define l_ALPHA 0
-#define l_HD 1
-#define l_HD_CODE 2
-#define l_L  3
-#define l_R  4
-#define l_B  5
-#define l_FUNC 6
-
+#define l_CODE 1
+#define l_HD 2
+#define l_HD_CODE 3
+#define l_L  4
+#define l_R  5
+#define l_B  6
+#define l_FUNC 7
 
 &mt {
     tapping-term-ms = <145>;
@@ -18,7 +18,7 @@
 };
 
 &sk {
-    release-after-ms = <2500>;
+    release-after-ms = <2000>;
     quick-release;
     lazy;
 };
