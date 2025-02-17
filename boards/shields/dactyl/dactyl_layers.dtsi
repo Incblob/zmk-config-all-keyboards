@@ -10,10 +10,10 @@ AS(TAB)         AS(A) AS(R) AS(S) AS(T) AS(G)                                   
 
 coding_layer1{
         bindings = <
-&trans &trans &trans &trans &trans &trans       &trans &trans &trans    &trans &trans &trans
-&trans &trans &trans &trans &trans &trans       &trans &trans &trans    &trans &trans &trans
-&trans &trans &trans &trans &trans &trans       &trans &trans &trans    AS(DOT) &trans &trans
-       &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans       &trans &trans &trans         &trans &trans &trans
+&trans &trans &trans &trans &trans &trans       &trans &trans &trans         &trans &trans &trans
+&trans &trans &trans &trans &trans &trans       &trans &trans &td_comma_code AS(DOT) &trans &trans
+       &trans &trans &trans &trans &trans       &trans &trans &trans        &trans &trans
                                         &trans &trans 
         >;
 
@@ -32,10 +32,10 @@ coding_layer1{
 
 coding_layer2{
         bindings = <
-&trans &trans &trans &trans &trans &trans       &trans    AS(DOT) &trans &trans &trans &trans 
-&trans &trans &trans &trans &trans &trans       &trans    &trans  &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans       &trans    &trans  &trans &trans &trans &trans
-       &trans &trans &trans &trans &trans       &trans    &trans  &trans &trans &trans
+&trans &trans &trans &trans &trans &trans       &trans          AS(DOT) &trans &trans &trans &trans 
+&trans &trans &trans &trans &trans &trans       &&td_comma_code &trans  &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans       &trans          &trans  &trans &trans &trans &trans
+       &trans &trans &trans &trans &trans       &trans          &trans  &trans &trans &trans
                                 &trans &trans &trans &trans 
         >;
 
@@ -46,7 +46,7 @@ coding_layer2{
 &kp LC(C)            &kp LSHIFT  &kp s_exl  &kp s_at      &kp s_amp       &kp s_per         &kp PAGE_UP    &kp LEFT    &kp DOWN   &kp RIGHT     &kp s_ast     &none
 &as LS(LC(V)) LC(V)  &kp LCTRL   &kp GRAVE  &trans        &kp LC(LS(TAB))  &kp LC(TAB)      &kp PAGE_DOWN  &kp s_dol   &kp s_eur  &kp s_sec     &trans         &none
                     &kp RET    &kp LC(B)    &kp LC(LS(P))  &trans        &kp LSHIFT         &kp K_APP         &mo l_R     &kp LALT   &trans        &trans
-                                                    L&sys_reset   &bootloader                      &none       &none
+                                                    &sys_reset   &bootloader                      &none       &none
     >; 
     }; 
 

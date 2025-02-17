@@ -79,6 +79,17 @@ behaviors {
             my_lk_config;
             bindings = <&semi_space>, <&comma_space>;
         };
+    
+    td_comma_code: td_comma_code {
+        TD_template;
+        bindings = <&mt_comma_code 0 0>
+                 , <AS(COMMA)>;
+    };
+    mt_comma_code: mt_comma_code {
+            my_lk_config;
+            bindings = <&semi_newline>, <&comma_space>;
+        };
+    
 
     td_qu: td_qu {
             TD_template;
