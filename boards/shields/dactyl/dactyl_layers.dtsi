@@ -33,7 +33,7 @@ coding_layer1{
 coding_layer2{
         bindings = <
 &trans &trans &trans &trans &trans &trans       &trans          AS(DOT) &trans &trans &trans &trans 
-&trans &trans &trans &trans &trans &trans       &&td_comma_code &trans  &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans       &td_comma_code &trans  &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans       &trans          &trans  &trans &trans &trans &trans
        &trans &trans &trans &trans &trans       &trans          &trans  &trans &trans &trans
                                 &trans &trans &trans &trans 
