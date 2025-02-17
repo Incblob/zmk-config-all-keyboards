@@ -46,7 +46,7 @@ coding_layer2{
 &kp LC(C)            &kp LSHIFT  &kp s_exl  &kp s_at      &kp s_amp       &kp s_per         &kp PAGE_UP    &kp LEFT    &kp DOWN   &kp RIGHT     &kp s_ast     &none
 &as LS(LC(V)) LC(V)  &kp LCTRL   &kp GRAVE  &trans        &kp LC(LS(TAB))  &kp LC(TAB)      &kp PAGE_DOWN  &kp s_dol   &kp s_eur  &kp s_sec     &trans         &none
                     &kp RET    &kp LC(B)    &kp LC(LS(P))  &trans        &kp LSHIFT         &kp K_APP         &mo l_R     &kp LALT   &trans        &trans
-                                                    &sys_reset   &bootloader                      &none       &none
+                                                    L&sys_reset   &bootloader                      &none       &none
     >; 
     }; 
 
@@ -63,7 +63,7 @@ coding_layer2{
     both_layer {
         bindings = <
 &sl l_FUNC &none  &none         &none  &kp C_PP      &kp C_VOL_UP        &bt BT_CLR &line_select      &kp LC(HOME)  &kp LS(END)         &to l_CODE     &to l_ALPHA
-&unstuck      &none  &mt LC(F2) F2 &none  &none         &kp C_VOL_DN        &none      &kp LS(LC(LEFT))  &kp LC(END)   &kp LS(LC(RIGHT))   &to l_HD_CODE  &to l_HD
+&unstuck      &none  &mt LC(F2) F2 &none  &none         &kp C_VOL_DN        &none      &kp LS(LC(LEFT))  &kp LC(END)   &kp LS(LC(RIGHT))   &tog l_HD_CODE  &to l_HD
 &obs_link  &none  &none     &none  &kp LA(LEFT)  &kp LA(RIGHT)       &none      &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3   &bt BT_SEL 4
                         &none   &none     &none  &trans &none           &none  &trans  &none &none  &none
                                              &none  &none        &none     &none
