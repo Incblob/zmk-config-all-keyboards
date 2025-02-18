@@ -1,3 +1,4 @@
+#include <behaviors.dtsi>
 &mt {
     tapping-term-ms = <145>;
     quick_tap_ms = <140>;
