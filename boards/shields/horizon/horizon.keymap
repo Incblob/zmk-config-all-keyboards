@@ -14,9 +14,10 @@
 #define l_G2 8
 
 
-#include "../globals.dtsi"
+
 
 /{
+    #include "../globals.dtsi"
 
     #include "horizon_layout.dtsi"
     #include "../behaviors.dtsi"    

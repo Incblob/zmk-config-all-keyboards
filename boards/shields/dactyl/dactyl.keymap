@@ -12,9 +12,9 @@
 #define l_B  6
 #define l_FUNC 7
 
-#include "../globals.dtsi"
 
 /{
+    #include "../globals.dtsi"
 
     #include "dactyl_layout.dtsi"
     #include "../combos.dtsi"
