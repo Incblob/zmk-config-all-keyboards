@@ -12,9 +12,20 @@
 #define l_B  6
 #define l_FUNC 7
 
+#include "../globals.dtsi"
+
+{
+    conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+        if-layers = <l_L l_R>;
+        then-layer = <l_B>;
+    };
+};
+}
 
 /{
-    #include "../globals.dtsi"
+ 
 
     #include "dactyl_layout.dtsi"
     #include "../combos.dtsi"
