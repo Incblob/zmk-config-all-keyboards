@@ -2,6 +2,7 @@
 #define ak_idle_term 200
 
 #define TD_template compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <175>
+#define ALPHAS A B C D E F G H I J H K L M N O P Q R S T U V W X Y Z
 
 #define     my_hrm_config \
             compatible = "zmk,behavior-hold-tap"; \
@@ -24,6 +25,18 @@
             flavor = "tap-preferred"
 
 behaviors {
+
+        mtg: mod_tap_game {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <400>;
+        quick-tap-ms = <200>;
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <1>;    // <---[[the W key]]
+    };
+
     as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
@@ -61,7 +74,7 @@ behaviors {
 
     td_comma: td_comma {
         TD_template;
-        bindings = <&mt_comma COMMA COMMA>
+        bindings = <&mt_comma 0 0>
                  , <AS(COMMA)>;
     };
     mt_comma: mt_comma {
@@ -76,7 +89,7 @@ behaviors {
     };
     mt_comma_code: mt_comma_code {
             my_lk_config;
-            bindings = <&semi_newline>, <&comma_space>;
+            bindings = <&kp LS(COMMA)>, <&comma_space>;
         };
     
 
@@ -195,13 +208,21 @@ behaviors {
 
         akt_yu { trigger-keys = <Z>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp I>; };
     };
+    ak_x: ak_x { // GX->GT, MX->MB
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(X)>;
+
+        akt_mx { trigger-keys = <M>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp B>; };
+        akt_gx { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp T >; };
+    };
     
     ak_apo: ak_apo { // apostrophe after Alpha
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
         bindings = <AS(NON_US_HASH)>;
 
-        akt_alpha { trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>; max-prior-idle-ms = <800>; bindings = <&kp LS(NON_US_HASH)>; };
+        akt_alpha { trigger-keys = <ALPHAS>; max-prior-idle-ms = <800>; bindings = <&kp LS(NON_US_HASH)>; };
     };
 
 };
