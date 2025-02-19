@@ -84,13 +84,13 @@ behaviors {
 
 
         // CODE
-    td_dot_code: td_dot {
+    td_dot_code: td_dot_code {
         TD_template;
         bindings = <&mt_dot 0 DOT>
                  , <AS(DOT)>;
     };
     
-    mt_dot_code: mt_dot {
+    mt_dot_code: mt_dot_code {
             my_lk_config;
             bindings = <&colon_double_space>, <&kp>;
         };
