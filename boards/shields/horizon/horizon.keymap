@@ -16,17 +16,16 @@
 
 #include "../globals.dtsi"
 
-{
-    conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-        if-layers = <l_L l_R>;
-        then-layer = <l_B>;
-    };
-};
-}
+
 
 /{
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <l_L l_R>;
+            then-layer = <l_B>;
+        };
+    };
     #include "horizon_layout.dtsi"
     #include "../behaviors.dtsi"    
     #include "../macros.dtsi"
