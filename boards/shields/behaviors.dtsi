@@ -84,12 +84,12 @@ behaviors {
     
     td_comma_code: td_comma_code {
         TD_template;
-        bindings = <&mt_comma_code 0 0>
+        bindings = <&mt_comma_code LS(COMMA) 0>
                  , <AS(COMMA)>;
     };
     mt_comma_code: mt_comma_code {
             my_lk_config;
-            bindings = <&kp LS(COMMA)>, <&comma_space>;
+            bindings = <&kp>, <&comma_space>;
         };
     
 
