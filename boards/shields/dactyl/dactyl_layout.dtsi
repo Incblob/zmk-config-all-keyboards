@@ -4,8 +4,8 @@
  LT0 LT1 LT2 LT3 LT4 LT5          RT0 RT1 RT2 RT3 RT4 RT5 
  LM0 LM1 LM2 LM3 LM4 LM5          RM0 RM1 RM2 RM3 RM4 RM5 
  LB0 LB1 LB2 LB3 LB4 LB5  		  RB0 RB1 RB2 RB3 RB4 RB5 
- 	     LH1 LH2 LH3 LH4 LH5    RH1 RH2 RH3 RH4 RH5   
- 	   			 LX1 LX2        RX1 RX2  				  
+ 	     LH2 LH3 LH4 LH5 LH6   RH0 RH1 RH2 RH3 RH4
+ 	   			 LX1 LX0        RX0 RX1  				  
 */
 
 #define LT0 0
@@ -47,21 +47,21 @@
 #define RB4 34
 #define RB5 35
 
-#define LH1 36
-#define LH2 37
-#define LH3 38
-#define LH4 39
-#define LH5 40
-#define RH1 41
-#define RH2 42
-#define RH3 43
-#define RH4 44
-#define RH5 45
+#define LH2 36
+#define LH3 37
+#define LH4 38
+#define LH5 39
+#define LH6 40
+#define RH0 41
+#define RH1 42
+#define RH2 43
+#define RH3 44
+#define RH4 45
 
-#define RX1 46
-#define RX2 47
-#define LX1 48
-#define LX2 49
+#define RX0 46
+#define RX1 47
+#define LX0 48
+#define LX1 49
 
 // #define de_ae SQT
 // #define de_s MINUS

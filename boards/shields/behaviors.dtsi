@@ -92,7 +92,7 @@ behaviors {
     
     mt_dot_code: mt_dot_code {
             my_lk_config;
-            bindings = <&colon_double_space>, <&kp>;
+            bindings = <&colon_space>, <&kp>;
         };
     
     td_comma_code: td_comma_code {
