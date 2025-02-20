@@ -62,7 +62,7 @@ behaviors {
     //
     td_dot: td_dot {
         TD_template;
-        bindings = <&mt_dot DOT DOT>
+        bindings = <&mt_dot 0 0>
                  , <AS(DOT)>
                  , <&dotdotdot>;
     };
@@ -86,7 +86,7 @@ behaviors {
         // CODE
     td_dot_code: td_dot_code {
         TD_template;
-        bindings = <&mt_dot 0 DOT>
+        bindings = <&mt_dot_code 0 DOT>
                  , <AS(DOT)>;
     };
     
@@ -98,17 +98,23 @@ behaviors {
     td_comma_code: td_comma_code {
         TD_template;
         bindings = <&mt_comma_code LS(COMMA) 0>
-                 , <&kp COMMA>;
+                 , <&mt_semi_code 0 COMMA >;
     };
+    
     mt_comma_code: mt_comma_code {
             my_lk_config;
             bindings = <&kp>, <&comma_space>;
+        };
+    
+    mt_semi_code: mt_comma_code {
+            my_lk_config;
+            bindings = <&semi_newline>, <&kp>;
         };
         // CODE END
 
     td_qu: td_qu {
             TD_template;
-            bindings = <&mt_qu Q U>
+            bindings = <&mt_qu 0 0>
                     , <AS(Q)>;
         };
     

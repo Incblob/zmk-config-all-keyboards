@@ -1,7 +1,7 @@
 #include <behaviors.dtsi>
 
 &mt {
-    tapping-term-ms = <145>;
+    tapping-term-ms = <110>;
     quick_tap_ms = <140>;
 };
 
