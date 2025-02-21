@@ -1,16 +1,16 @@
-#define my_tapping_term 110
+#define my_tapping_term 90
 #define ak_idle_term 200
 
-#define TD_template compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <175>
+#define TD_template compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <165>
 #define ALPHAS A B C D E F G H I J H K L M N O P Q R S T U V W X Y Z
 
-#define     my_hrm_config \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            flavor = "balanced"; \
-            hold-trigger-on-release; \
-            tapping-term-ms = <my_tapping_term>; \
-            quick-tap-ms = <my_quick_tapping_term>
+// #define     my_hrm_config \
+//             compatible = "zmk,behavior-hold-tap"; \
+//             #binding-cells = <2>; \
+//             flavor = "balanced"; \
+//             hold-trigger-on-release; \
+//             tapping-term-ms = <my_tapping_term>; \
+//             quick-tap-ms = <my_quick_tapping_term>
 
 #define     my_lk_config \
             compatible = "zmk,behavior-hold-tap"; \
@@ -42,7 +42,6 @@ behaviors {
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
             tapping_term_ms = <170>;
-            quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>; 
         };
@@ -52,7 +51,6 @@ behaviors {
             label = "SHIFT_sticky";
             #binding-cells = <2>;
             tapping_term_ms = <160>;
-            quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&sk>; 
         };
@@ -87,7 +85,7 @@ behaviors {
     td_dot_code: td_dot_code {
         TD_template;
         bindings = <&mt_dot_code 0 DOT>
-                 , <AS(DOT)>;
+                 , <&kp LS(DOT)>;
     };
     
     mt_dot_code: mt_dot_code {
@@ -98,18 +96,19 @@ behaviors {
     td_comma_code: td_comma_code {
         TD_template;
         bindings = <&mt_comma_code LS(COMMA) 0>
-                 , <&mt_semi_code 0 COMMA >;
+                 // , <&mt_semi_code 0 COMMA >;
+                    , <&semi_newline >;
     };
-    
+
     mt_comma_code: mt_comma_code {
             my_lk_config;
             bindings = <&kp>, <&comma_space>;
         };
     
-    mt_semi_code: mt_semi_code {
-            my_lk_config;
-            bindings = <&semi_newline>, <&kp>;
-        };
+    // mt_semi_code: mt_semi_code {
+    //         my_lk_config;
+    //         bindings = <&semi_newline>, <&kp>;
+        // };
         // CODE END
 
     td_qu: td_qu {
