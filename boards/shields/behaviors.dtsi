@@ -215,7 +215,7 @@ behaviors {
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
         bindings = <AS(K)>;
-        dead-keys = <&kp G &kp T>; 
+        dead-keys = <G T>; 
 
         akt_gk { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L &kp K>; };
         akt_tk { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp C &kp K >; };
