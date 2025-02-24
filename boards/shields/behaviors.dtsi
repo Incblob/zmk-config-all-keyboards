@@ -1,8 +1,10 @@
 #define my_tapping_term 90
 #define ak_idle_term 200
 
-#define TD_template compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <165>
+#define TD_template compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>;\
+                                tapping-term-ms = <165>
 #define ALPHAS A B C D E F G H I J H K L M N O P Q R S T U V W X Y Z
+#define ALPHAS_S LS(A) LS(B) LS(C) LS(D) LS(E) LS(F) LS(G) LS(H) LS(I) LS(J) LS(H) LS(K) LS(L) LS(M) LS(N) LS(O) LS(P) LS(Q) LS(R) LS(S) LS(T) LS(U) LS(V) LS(W) LS(X) LS(Y) LS(Z)
 
 // #define     my_hrm_config \
 //             compatible = "zmk,behavior-hold-tap"; \
@@ -79,7 +81,6 @@ behaviors {
             my_lk_config;
             bindings = <&semi_space>, <&comma_space>;
         };
-
 
         // CODE
     td_dot_code: td_dot_code {
@@ -214,9 +215,10 @@ behaviors {
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
         bindings = <AS(K)>;
+        dead-keys = <&kp G &kp T>
 
-        akt_gk { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp L &kp K>; };
-        akt_tk { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp C &kp K >; };
+        akt_gk { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L &kp K>; };
+        akt_tk { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp C &kp K >; };
     };
 
     ak_u: ak_u {// YU-> YI
@@ -240,7 +242,7 @@ behaviors {
         #binding-cells = <0>;
         bindings = <AS(NON_US_HASH)>;
 
-        akt_alpha { trigger-keys = <Alphas BSPC>; max-prior-idle-ms = <800>; bindings = <&kp LS(NON_US_HASH)>; };
+        akt_alpha { strict-modifiers = true; trigger-keys = <ALPHAS ALPHAS_S BSPC>; max-prior-idle-ms = <800>; bindings = <&kp LS(NON_US_HASH)>; };
     };
 
 };
