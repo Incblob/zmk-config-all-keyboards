@@ -157,6 +157,7 @@ behaviors {
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
         bindings = <AS(M)>;
+        dead-keys = <X>; 
 
         akt_gm { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; };
         akt_xm { trigger-keys = <X>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp X &kp L>; };
@@ -178,6 +179,7 @@ behaviors {
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
         bindings = <AS(B)>;
+        dead-keys = <C>; 
 
         akt_pb { trigger-keys = <P>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp S>; };
         akt_cb { trigger-keys = <C>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp S &kp B>; };
@@ -196,6 +198,7 @@ behaviors {
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
         bindings = <AS(G)>;
+        dead-keys = <M>; 
 
         akt_mg { trigger-keys = <M>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp L &kp G>; };
         akt_kg { trigger-keys = <K>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; };
