@@ -215,10 +215,9 @@ behaviors {
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
         bindings = <AS(K)>;
-        dead-keys = <&kp G &kp T>; 
 
-        akt_gk { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L &kp K>; };
-        akt_tk { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp C &kp K >; };
+        akt_gk { trigger-keys = <G>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp L &kp K>; };
+        akt_tk { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp C &kp K >; };
     };
 
     ak_u: ak_u {// YU-> YI
