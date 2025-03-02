@@ -42,19 +42,19 @@ coding_layer2{
 };
     left_layer {
         bindings = <
-&kp LC(X)            AS(de_ae)   AS(de_s)   AS(de_oe)     AS(de_ue)       &kp de_til        &none          &sel_word   &kp UP     &kp s_que     AS(s_gra)      &kp LS(KP_PLUS)
-&kp LC(C)            &kp LSHIFT  &kp s_exl  &kp s_at      &kp s_amp       &kp s_per         &kp PAGE_UP    &kp LEFT    &kp DOWN   &kp RIGHT     &kp s_ast     &none
-&as LS(LC(V)) LC(V)  &kp LCTRL   &kp GRAVE  &trans        &kp LC(LS(TAB))  &kp LC(TAB)      &kp PAGE_DOWN  &kp s_dol   &kp s_eur  &kp s_sec     &trans         &none
-                    &kp RET    &kp LC(A)    &kp LC(LS(P))  &trans        &kp LC(Y)         &kp K_APP         &mo l_R     &kp LALT   &trans        &trans
-                                                    &sys_reset   &bootloader                      &none       &none
+&kp LC(X)            AS(de_ae)   AS(de_s)   AS(de_oe)     AS(de_ue)       &kp de_til        &none          &sel_word   &kp UP     &kp s_que     &as s_gra LS(s_gra) &kp LS(KP_PLUS)
+&kp LC(C)            &kp LSHIFT  &kp s_exl  &kp s_at      &kp s_amp       &kp s_per         &kp PAGE_UP    &kp LEFT    &kp DOWN   &kp RIGHT     &kp s_ast           &none
+&as LS(LC(V)) LC(V)  &kp LCTRL   &kp GRAVE  &trans        &kp LC(LS(TAB))  &kp LC(TAB)      &kp PAGE_DOWN  &kp s_dol   &kp s_eur  &kp s_sec     &trans              &none
+                    &kp RET    &kp LC(A)    &kp LC(LS(P))  &trans        &kp LC(Y)         &kp K_APP         &mo l_R     &kp LALT   &trans        &trans                                                    
+                                                    &sys_reset   &bootloader                      &none       &none 
     >; 
-    }; 
+    };
 
     right_layer {
         bindings = <
-&trans &kp RA(NON_US_BSLH) &as LS(N2) LS(NON_US_HASH)  &kp RA(N8)          &kp RA(N9)         &none                           &kp KP_ASTERISK &kp N7   &kp N8    &kp N9  &kp KP_MINUS   &kp KP_NUMLOCK
+&trans &kp RA(NON_US_BSLH) &mt LS(N2) LS(NON_US_HASH)  &kp RA(N8)          &kp RA(N9)         &none                           &kp KP_ASTERISK &kp N7   &kp N8    &kp N9  &kp KP_MINUS   &kp KP_NUMLOCK
 &trans &kp NON_US_BSLH     &kp LS(NON_US_BSLH)         &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                      &kp KP_SLASH    &kp N4   &kp N5    &kp N6  &kp KP_PLUS    &kp LC(KP_PLUS)
-&trans &none               &none                       &as RA(N7) RA(MINUS) &as RA(N0) LS(N7) &none                           &kp N0          &kp N1   &kp N2    &kp N3  &as COMMA DOT  &kp LC(FSLH)
+&trans &none               &none                       &mt RA(N7) RA(MINUS) &mt RA(N0) LS(N7) &none                           &kp N0          &kp N1   &kp N2    &kp N3  &mt COMMA DOT  &kp LC(FSLH)
                            &none                       &none               &kp LALT              &mo l_L  &none    &none    &lt l_R SPACE  &caps_word  &kp COMMA &kp DOT
                                                                                             &none    &none             &bootloader &sys_reset
     >;

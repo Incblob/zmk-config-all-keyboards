@@ -1,6 +1,6 @@
 default_layer {
     bindings = <
-&kp ESC         AS(F12) AS(W)    AS(F)         AS(P)         AS(B)                                   AS(J)         AS(L)    AS(U)     AS(Z)   &as LC(G) LC(F) &kp LC(HOME)
+&kp ESC         AS(F12) AS(W)    AS(F)         AS(P)         AS(B)                                   AS(J)         AS(L)    AS(U)     AS(Z)   &mt LC(G) LC(F) &kp LC(HOME)
 &ss LSHFT LSHFT AS(Q)   AS(R)    AS(S)         AS(T)         AS(G)                                   AS(M)         AS(N)    AS(E)     AS(I)   &ak_apo         &kp LC(END)
 AS(TAB)         AS(A)   AS(X)    AS(C)         AS(D)         AS(V)          AS(F12)      &caps_word  AS(K)       AS(H)  &td_comma &td_dot  AS(O)         AS(RET)
 &kp LCTRL       AS(Y)   &kp LGUI &kp LG(LS(S)) &mt LALT ESC  &lt l_L SPACE  &kp BSPC     &kp DELETE  &lt l_R SPACE AS(FSLH) &kp LEFT  &kp UP  &kp DOWN        &kp RIGHT
@@ -37,10 +37,10 @@ handsdown_code {
 
 left_layer {
     bindings = <
-AS(LC(Y))   &kp LC(Z)  AS(de_s)  AS(de_oe)  AS(de_ue)       &kp de_til                    &none          &sel_word  &kp UP    &kp s_que    &none      &none
-&kp LC(X)   AS(de_ae)  &kp s_exl &kp s_at   &kp s_amp       &kp s_per                     &kp PAGE_UP    &kp LEFT   &kp DOWN  &kp RIGHT    AS(s_gra)  &none
-&kp LC(C)   &kp LSHIFT &kp GRAVE &trans     &kp LC(LS(TAB)) &kp LC(TAB)  &none  &none     &kp PAGE_DOWN  &kp s_dol  &kp s_eur &kp s_sec      &kp s_ast  &none
-AS(LC(V))   &kp LCTRL  &kp RET   &kp LC(A)     &kp LC(LS(P))   &trans   &kp LC(Y)  &kp K_APP &mo l_R        &kp LALT   &trans    &trans       &trans     &trans                                                                                 
+AS(LC(Y))   &kp LC(Z)  AS(de_s)  AS(de_oe)  AS(de_ue)       &kp de_til                    &none          &sel_word  &kp UP    &kp s_que    &none                &none
+&kp LC(X)   AS(de_ae)  &kp s_exl &kp s_at   &kp s_amp       &kp s_per                     &kp PAGE_UP    &kp LEFT   &kp DOWN  &kp RIGHT    &mt s_gra LS(s_gra)  &none
+&kp LC(C)   &kp LSHIFT &kp GRAVE &trans     &kp LC(LS(TAB)) &kp LC(TAB)  &none  &none     &kp PAGE_DOWN  &kp s_dol  &kp s_eur &kp s_sec      &kp s_ast          &none
+AS(LC(V))   &kp LCTRL  &kp RET   &kp LC(A)     &kp LC(LS(P))   &trans   &kp LC(Y)  &kp K_APP &mo l_R        &kp LALT   &trans    &trans       &trans            &trans                                                                                 
     >;
 };
 
@@ -48,9 +48,9 @@ AS(LC(V))   &kp LCTRL  &kp RET   &kp LC(A)     &kp LC(LS(P))   &trans   &kp LC(Y
 
 right_layer {
     bindings = <
-&trans   &none               &as LS(N2) LS(NON_US_HASH) &kp RA(N8)           &kp RA(N9)   &none                                    &kp KP_ASTERISK  &kp N7     &kp N8    &kp N9  &kp KP_MINUS   &kp KP_NUMLOCK
+&trans   &none               &mt LS(N2) LS(NON_US_HASH) &kp RA(N8)           &kp RA(N9)   &none                                    &kp KP_ASTERISK  &kp N7     &kp N8    &kp N9  &kp KP_MINUS   &kp KP_NUMLOCK
 &trans   &kp RA(NON_US_BSLH) &kp LS(NON_US_BSLH)        &kp LS(N8)           &kp LS(N9)   &kp LS(N0)                               &kp KP_SLASH     &kp N4     &kp N5    &kp N6  &kp KP_PLUS    &kp LC(KP_PLUS)
-&trans   &kp NON_US_BSLH     &none                 &as RA(N7) RA(MINUS) &as RA(N0) LS(N7) &none      &kp LC(FSLH) &kp LC(KP_PLUS)  &kp N0           &kp N1     &kp N2    &kp N3  &as COMMA DOT  &kp LC(FSLH)
+&trans   &kp NON_US_BSLH     &none                 &mt RA(N7) RA(MINUS) &mt RA(N0) LS(N7) &none      &kp LC(FSLH) &kp LC(KP_PLUS)  &kp N0           &kp N1     &kp N2    &kp N3  &mt COMMA DOT  &kp LC(FSLH)
 &trans   &none               &none                      &none                &kp LALT     &mo l_L    &none         &none           &lt l_R SPACE    &caps_word &kp COMMA &kp DOT &kp COMMA       &none
     >;
 };
