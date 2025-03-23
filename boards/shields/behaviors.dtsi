@@ -61,7 +61,9 @@ behaviors {
     // TAP DANCE
     //
     td_dot: td_dot {
-        TD_template;
+        compatible = "zmk,behavior-tap-dance"; 
+        #binding-cells = <0>;
+        tapping-term-ms = <185>; 
         bindings = <&mt_dot 0 0>
                  , <AS(DOT)>
                  , <&dotdotdot>;
@@ -88,7 +90,7 @@ behaviors {
         bindings = <&mt_dot_code 0 DOT>
                  , <&kp LS(DOT)>;
     };
-    
+
     mt_dot_code: mt_dot_code {
             my_lk_config;
             bindings = <&colon_space>, <&kp>;

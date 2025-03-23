@@ -3,7 +3,7 @@ default_layer {
 &ss LSHFT LSHFT AS(Q) AS(W) AS(F) AS(P) AS(B)                                                 AS(J)      AS(L)   AS(U)      AS(Z)      &ak_apo      &as LC(G) LC(F)
 AS(TAB)         AS(A) AS(R) AS(S) AS(T) AS(G)                                                 AS(M)      AS(N)   AS(E)      AS(I)      AS(O)        &as LC(RET) RET
 &kp LCTRL       AS(Y) AS(X) AS(C) AS(D) AS(V)                                                 AS(K)      AS(H)   &td_comma  &td_dot    &kp DOWN         &kp RIGHT
-                &kp LGUI   &kp LG(LS(S))    &mt LALT ESC &lt l_L SPACE &kp BSPC     &mt LSHIFT DELETE   &lt l_R SPACE   AS(FSLH)    &kp LEFT  &kp UP
+                &kp LGUI &kp LG(LS(S)) &mt LALT ESC &lt l_L SPACE &kp BSPC  &kp DELETE   &lt l_R SPACE   AS(FSLH)    &kp LEFT  &kp UP
                                         &kp LS(LC(LALT)) &mt LS(F12) F12              &mt LS(LA(LC(LGUI))) K_APP   &caps_word
         >;
     };
@@ -21,9 +21,9 @@ coding_layer1{
 
  handsdown {
     bindings = <    
-&trans  &ak_x  AS(W)  &ak_m &ak_g &ak_j                  &none           &td_dot &td_qu  AS(Y)   AS(F)  &trans
-&trans  AS(S)  &ak_c  AS(N) AS(T) &ak_k                  &td_comma       AS(A)   AS(E)   AS(I)   &ak_h  &trans
-&trans  &ak_b  AS(P)  AS(L) AS(D) AS(V)                  AS(NON_US_HASH) &ak_u   AS(O)   AS(Z)   &trans &trans
+&trans  &ak_x  AS(W)  &ak_m &ak_g &ak_j                  &none      &td_dot &td_qu  AS(Y)   AS(F)  &trans
+&trans  AS(S)  &ak_c  AS(N) AS(T) &ak_k                  &td_comma  AS(A)   AS(E)   AS(I)   &ak_h  &trans
+&trans  &ak_b  AS(P)  AS(L) AS(D) AS(V)                  &ak_apo    &ak_u   AS(O)   AS(Z)   &trans &trans
             &trans  &trans &trans &lt l_L R &trans  &trans &trans  &trans &trans &trans
                                 &trans  &trans              &trans &trans
     >;
@@ -54,7 +54,7 @@ coding_layer2{
         bindings = <
 &trans &kp RA(NON_US_BSLH) &mt LS(N2) LS(NON_US_HASH)  &kp RA(N8)          &kp RA(N9)         &none                           &kp KP_ASTERISK &kp N7   &kp N8    &kp N9  &kp KP_MINUS   &kp KP_NUMLOCK
 &trans &kp NON_US_BSLH     &kp LS(NON_US_BSLH)         &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                      &kp KP_SLASH    &kp N4   &kp N5    &kp N6  &kp KP_PLUS    &kp LC(KP_PLUS)
-&trans &none               &none                       &mt RA(N7) RA(MINUS) &mt RA(N0) LS(N7) &none                           &kp N0          &kp N1   &kp N2    &kp N3  &mt COMMA DOT  &kp LC(FSLH)
+&trans &none               &none                       &as RA(N7) RA(MINUS) &as RA(N0) LS(N7) &none                           &kp N0          &kp N1   &kp N2    &kp N3  &mt COMMA DOT  &kp LC(FSLH)
                            &none                       &none               &kp LALT              &mo l_L  &none    &none    &lt l_R SPACE  &caps_word  &kp COMMA &kp DOT
                                                                                             &none    &none             &bootloader &sys_reset
     >;
