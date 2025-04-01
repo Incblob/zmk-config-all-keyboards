@@ -243,7 +243,7 @@ behaviors {
         #binding-cells = <0>;
         bindings = <AS(NON_US_HASH)>;
 
-        akt_alpha {trigger-keys = <ALPHAS ALPHAS_S BSPC>; max-prior-idle-ms = <800>; bindings = <&kp LS(NON_US_HASH)>; strict-modifiers;};
+        akt_alpha {trigger-keys = <ALPHAS ALPHAS_S BSPC>; max-prior-idle-ms = <800>; bindings = <&kp LS(NON_US_HASH)>;};
     };
 
 };
