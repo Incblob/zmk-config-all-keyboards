@@ -1,12 +1,16 @@
 #define my_tapping_term 90
 #define ak_idle_term 200
-#define fnc_idle_term 200
+#define fnc_idle_term 400
 
 #define TD_template compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>;\
                                 tapping-term-ms = <165>
 #define ALPHAS A B C D E F G H I J H K L M N O P Q R S T U V W X Y Z
 #define ALPHAS_S LS(A) LS(B) LS(C) LS(D) LS(E) LS(F) LS(G) LS(H) LS(I) LS(J) LS(H) LS(K) LS(L) LS(M) LS(N) LS(O) LS(P) LS(Q) LS(R) LS(S) LS(T) LS(U) LS(V) LS(W) LS(X) LS(Y) LS(Z)
 
+#define CTRL_F_MACRO(key, f_key)  {compatible = "zmk,behavior-adaptive-key";#binding-cells = <0>;\
+        bindings = <key>;\
+        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(f_key))>; };\
+    };
 // #define     my_hrm_config \
 //             compatible = "zmk,behavior-hold-tap"; \
 //             #binding-cells = <2>; \
@@ -251,28 +255,23 @@ behaviors {
         akt_bspc {trigger-keys = <BSPC>; max-prior-idle-ms = <300>; bindings = <&kp LS(NON_US_HASH)>;};
     };
 
-    ak_all_w: ak_all_w {
-        compatible = "zmk,behavior-adaptive-key";
-        #binding-cells = <0>;
-        bindings = <AS(W)>;
-
-        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(F20))>; };
-    };
+    ak_col_x: ak_col_x CTRL_F_MACRO(C, F18)
+    ak_hd_p: ak_hd_p CTRL_F_MACRO(P, F18)
     
-    ak_all_d: ak_all_d {
-        compatible = "zmk,behavior-adaptive-key";
-        #binding-cells = <0>;
-        bindings = <AS(D)>;
+    ak_col_c: ak_col_c CTRL_F_MACRO(C, F19)
+    ak_hd_l: ak_hd_l CTRL_F_MACRO(C, F19)
 
-        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(F21))>; };
-    };
+    ak_all_w: ak_all_w CTRL_F_MACRO(W, F20)
+    
+    ak_all_d: ak_all_d CTRL_F_MACRO(D, F21)
 
-    ak_all_v: ak_all_v {
-        compatible = "zmk,behavior-adaptive-key";
-        #binding-cells = <0>;
-        bindings = <AS(V)>;
+    ak_all_v: ak_all_v CTRL_F_MACRO(V, F22)
+    // {
+    //     compatible = "zmk,behavior-adaptive-key";
+    //     #binding-cells = <0>;
+    //     bindings = <AS(V)>;
 
-        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(F22))>; };
-    };
+    //     akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(F22))>; };
+    // };
 
 };
