@@ -1,15 +1,12 @@
 #define my_tapping_term 90
 #define ak_idle_term 200
+#define fnc_idle_term 200
 
 #define TD_template compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>;\
                                 tapping-term-ms = <165>
 #define ALPHAS A B C D E F G H I J H K L M N O P Q R S T U V W X Y Z
 #define ALPHAS_S LS(A) LS(B) LS(C) LS(D) LS(E) LS(F) LS(G) LS(H) LS(I) LS(J) LS(H) LS(K) LS(L) LS(M) LS(N) LS(O) LS(P) LS(Q) LS(R) LS(S) LS(T) LS(U) LS(V) LS(W) LS(X) LS(Y) LS(Z)
 
-// #define FMACRO(target_key, trigger, result) {compatible = "zmk,behavior-adaptive-key";#binding-cells = <0>;bindings = <target_key>; \
-//         // dead-keys = <trigger>\
-//         akt_target_key {trigger-keys = <trigger>; max-prior-idle-ms = <300>; bindings = <result>;};\
-//     };
 // #define     my_hrm_config \
 //             compatible = "zmk,behavior-hold-tap"; \
 //             #binding-cells = <2>; \
@@ -199,6 +196,7 @@ behaviors {
 
         akt_tc { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp C &kp H>; };
         akt_bc { trigger-keys = <B>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp S>; };
+        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp LC(A)>; };
     };
 
     ak_g: ak_g { // MG -> LG,  KG -> KL, JPG macro, 
@@ -254,15 +252,28 @@ behaviors {
         akt_bspc {trigger-keys = <BSPC>; max-prior-idle-ms = <300>; bindings = <&kp LS(NON_US_HASH)>;};
     };
 
-    ak_ftap_all: ak_ftap_all {
+    ak_all_w: ak_all_w {
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
-        bindings = <&kp N>;
-        dead-keys = <F24>;
+        bindings = <AS(W)>;
 
-        akt_n {trigger-keys = <F24>; max-prior-idle-ms = <200>; bindings = <&kp LC(A)>;};
-    }; 
+        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(F20))>; };
+    };
+    
+    ak_all_d: ak_all_d {
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(D)>;
 
-    // ak_ftap_i: ak_ftap_i FMACRO(I, F24, &kp LC(P))
+        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(F21))>; };
+    };
+
+    ak_all_v: ak_all_v {
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(V)>;
+
+        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(F22))>; };
+    };
 
 };
