@@ -83,6 +83,7 @@ behaviors {
         bindings = <&mt_comma 0 0>
                  , <AS(COMMA)>;
     };
+
     mt_comma: mt_comma {
             my_lk_config;
             bindings = <&semi_space>, <&comma_space>;
@@ -93,13 +94,13 @@ behaviors {
         compatible = "zmk,behavior-tap-dance"; 
         #binding-cells = <0>;
         tapping-term-ms = <185>; 
-        bindings = <&mt_dot_code 0 DOT>
+        bindings = <&mt_dot_code LS(DOT) DOT>
                  , <&colon_space>;
     };
 
     mt_dot_code: mt_dot_code {
             my_lk_config;
-            bindings = <&kp LS(DOT)>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
     
     td_comma_code: td_comma_code {
