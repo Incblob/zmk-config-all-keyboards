@@ -258,9 +258,10 @@ behaviors {
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
         bindings = <&kp N>;
+        dead-keys = <F24>
 
         akt_n {trigger-keys = <F24>; max-prior-idle-ms = <200>; bindings = <&kp LC(A)>;};
-    }
+    }; 
 
     // ak_ftap_i: ak_ftap_i FMACRO(I, F24, &kp LC(P))
 
