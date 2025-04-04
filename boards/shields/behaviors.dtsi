@@ -8,7 +8,7 @@
 #define ALPHAS_S LS(A) LS(B) LS(C) LS(D) LS(E) LS(F) LS(G) LS(H) LS(I) LS(J) LS(H) LS(K) LS(L) LS(M) LS(N) LS(O) LS(P) LS(Q) LS(R) LS(S) LS(T) LS(U) LS(V) LS(W) LS(X) LS(Y) LS(Z)
 
 #define CTRL_F_MACRO(key, f_key)  {compatible = "zmk,behavior-adaptive-key";#binding-cells = <0>;\
-        bindings = <key>;\
+        bindings = <AS(key)>;\
         akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(f_key))>; };\
     };
 // #define     my_hrm_config \
