@@ -8,7 +8,7 @@
 
 #define FMACRO(target_key, trigger, result) {compatible = "zmk,behavior-adaptive-key";#binding-cells = <0>;bindings = <target_key>; \
         // dead-keys = <trigger>\
-        akt_ {trigger-keys = <trigger>; max-prior-idle-ms = <300>; bindings = <result>;};\
+        akt_target_key {trigger-keys = <trigger>; max-prior-idle-ms = <300>; bindings = <result>;};\
     };
 // #define     my_hrm_config \
 //             compatible = "zmk,behavior-hold-tap"; \
