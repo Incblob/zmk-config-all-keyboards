@@ -8,7 +8,7 @@
 
 #define FMACRO(target_key, trigger, result) {compatible = "zmk,behavior-adaptive-key";#binding-cells = <0>;bindings = <target_key>; \
         // dead-keys = <trigger>\
-        akt_alpha {trigger-keys = <trigger>; max-prior-idle-ms = <300>; bindings = <result>;};\
+        akt_ {trigger-keys = <trigger>; max-prior-idle-ms = <300>; bindings = <result>;};\
     };
 // #define     my_hrm_config \
 //             compatible = "zmk,behavior-hold-tap"; \
@@ -250,10 +250,11 @@ behaviors {
         bindings = <AS(NON_US_HASH)>;
 
         akt_alpha {trigger-keys = <ALPHAS>; max-prior-idle-ms = <800>; bindings = <&kp LS(NON_US_HASH)>;};
-        akt_alpha {trigger-keys = <BSPC>; max-prior-idle-ms = <300>; bindings = <&kp LS(NON_US_HASH)>;};
+        akt_bspc {trigger-keys = <BSPC>; max-prior-idle-ms = <300>; bindings = <&kp LS(NON_US_HASH)>;};
     };
 
-    ak_ftap: ak_ftap FMACRO(N, F24, &kp LC(A))
+    ak_ftap_all: ak_ftap_all FMACRO(N, F24, &kp LC(A))
 
+    ak_ftap_i: ak_ftap_i FMACRO(I, F24, &kp LC(P))
 
 };
