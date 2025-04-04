@@ -196,7 +196,6 @@ behaviors {
 
         akt_tc { trigger-keys = <T>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp C &kp H>; };
         akt_bc { trigger-keys = <B>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp S>; };
-        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp LC(A)>; };
     };
 
     ak_g: ak_g { // MG -> LG,  KG -> KL, JPG macro, 
