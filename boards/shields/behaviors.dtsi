@@ -11,7 +11,7 @@
         compatible = "zmk,behavior-adaptive-key";\
         #binding-cells = <0>;\
         bindings = <AS(key)>;\
-        akt_ctrl { trigger-keys = <F13>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp f_key>; strict-modifiers;};\
+        akt_ctrl { trigger-keys = <F16>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp f_key>; strict-modifiers;};\
     };
 // #define     my_hrm_config \
 //             compatible = "zmk,behavior-hold-tap"; \
