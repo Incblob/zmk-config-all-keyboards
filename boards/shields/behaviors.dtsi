@@ -9,7 +9,7 @@
 
 #define CTRL_F_MACRO(key, f_key)  {compatible = "zmk,behavior-adaptive-key";#binding-cells = <0>;\
         bindings = <AS(key)>;\
-        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp LA(LC(f_key))>; };\
+        akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp f_key>; };\
     };
 // #define     my_hrm_config \
 //             compatible = "zmk,behavior-hold-tap"; \
@@ -28,7 +28,7 @@
 #define     ion_config \
             compatible = "zmk,behavior-hold-tap"; \
             #binding-cells = <2>; \
-            tapping-term-ms = <150>; \
+            tapping-term-ms = <145>; \
             flavor = "tap-preferred"
 
 behaviors {
@@ -255,6 +255,8 @@ behaviors {
         akt_bspc {trigger-keys = <BSPC>; max-prior-idle-ms = <300>; bindings = <&kp LS(NON_US_HASH)>;};
     };
 
+    // Fkeys adaptive
+
     ak_col_x: ak_col_x CTRL_F_MACRO(C, F18)
     ak_hd_p: ak_hd_p CTRL_F_MACRO(P, F18)
     
@@ -266,6 +268,15 @@ behaviors {
     ak_all_d: ak_all_d CTRL_F_MACRO(D, F21)
 
     ak_all_v: ak_all_v CTRL_F_MACRO(V, F22)
+// Right side
+    ak_col_n: ak_col_n CTRL_F_MACRO(N, F23)
+    ak_hd_a: ak_hd_a CTRL_F_MACRO(A, F23)
+
+    ak_all_e: ak_all_e CTRL_F_MACRO(E, F24)
+    
+    ak_all_i: ak_all_i CTRL_F_MACRO(I, F17)
+
+
     // {
     //     compatible = "zmk,behavior-adaptive-key";
     //     #binding-cells = <0>;

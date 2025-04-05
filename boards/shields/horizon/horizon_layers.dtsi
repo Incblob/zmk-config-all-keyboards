@@ -1,9 +1,9 @@
 default_layer {
     bindings = <
-&kp ESC         AS(F12) &ak_all_w AS(F)         AS(P)         AS(B)                                   AS(J)         AS(L)    AS(U)     AS(Z)   &mt LC(G) LC(F) &kp LC(HOME)
-&ss LSHFT LSHFT AS(Q)   AS(R)     AS(S)         AS(T)         AS(G)                                   AS(M)         AS(N)    AS(E)     AS(I)   &ak_apo         &kp LC(END)
-AS(TAB)         AS(A)   &ak_col_x     &ak_col_c         &ak_all_d      &ak_all_v          AS(F12)      &caps_word  AS(K)       AS(H)  &td_comma &td_dot  AS(O)         AS(RET)
-&kp LCTRL       AS(Y)   &kp LGUI  &kp LG(LS(S)) &mt LALT ESC  &lt l_L SPACE  &kp BSPC     &kp DELETE  &lt l_R SPACE AS(FSLH) &kp LEFT  &kp UP  &kp DOWN        &kp RIGHT
+&kp ESC         AS(F12) &ak_all_w AS(F)         AS(P)         AS(B)                                   AS(J)         AS(L)     AS(U)     AS(Z)     &mt LC(G) LC(F) &kp LC(HOME)
+&ss LSHFT LSHFT AS(Q)   AS(R)     AS(S)         AS(T)         AS(G)                                   AS(M)         &ak_col_n &ak_all_e ak_all_i  &ak_apo         &kp LC(END)
+AS(TAB)         AS(A)   &ak_col_x     &ak_col_c         &ak_all_d &ak_all_v   AS(F12) &caps_word      AS(K)         AS(H)     &td_comma &td_dot   AS(O)           AS(RET)
+&kp LCTRL       AS(Y)   &kp LGUI  &kp LG(LS(S)) &mt LALT ESC  &lt l_L SPACE  &kp BSPC     &kp DELETE  &lt l_R SPACE AS(FSLH)  &kp LEFT  &kp UP    &kp DOWN        &kp RIGHT
     >;
 };
 
@@ -18,9 +18,9 @@ coding_layer {
 
  handsdown {
     bindings = <    
-&trans  AS(F12) &ak_all_w  &ak_m  &ak_g     &ak_j                         &none           &td_dot &td_qu  AS(Y)   &trans   &trans
-&trans  &ak_x   &ak_c      AS(N)  AS(T)     &ak_k                         &td_comma       AS(A)   AS(E)   AS(I)   AS(F)    &trans
-&trans  AS(S)   &ak_hd_p      &ak_hd_l  &ak_all_d  &ak_all_v   &trans    &trans    &ak_apo         &ak_u   AS(O)   AS(Z)   &ak_h   &trans
+&trans  AS(F12) &ak_all_w  &ak_m  &ak_g     &ak_j                              &none     &td_dot  &td_qu    AS(Y)     &trans   &trans
+&trans  &ak_x   &ak_c      AS(N)  AS(T)     &ak_k                              &td_comma &ak_hd_a &ak_all_e &ak_all_i AS(F)    &trans
+&trans  AS(S)   &ak_hd_p      &ak_hd_l  &ak_all_d  &ak_all_v   &trans    &trans  &ak_apo &ak_u    AS(O)     AS(Z)     &ak_h   &trans
 &trans  &ak_b   &trans     &trans &trans    &lt l_L R   &trans    &mt LSHIFT DELETE &trans  &trans &trans  &trans  &trans    &trans
     >;
 };

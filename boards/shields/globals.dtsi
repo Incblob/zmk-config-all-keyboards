@@ -6,7 +6,7 @@
 };
 
 &sk {
-    release-after-ms = <3000>;
+    release-after-ms = <2500>;
     quick-release;
     // lazy;
 };
