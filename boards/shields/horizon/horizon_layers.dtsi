@@ -3,7 +3,7 @@ default_layer {
 &kp ESC         AS(F12) &ak_all_w AS(F)         AS(P)         AS(B)                                   AS(J)         AS(L)     AS(U)     AS(Z)     &mt LC(G) LC(F) &kp LC(HOME)
 &ss LSHFT LSHFT AS(Q)   AS(R)     AS(S)         AS(T)         AS(G)                                   AS(M)         &ak_col_n &ak_all_e &ak_all_i  &ak_apo         &kp LC(END)
 AS(TAB)         AS(A)   &ak_col_x     &ak_col_c         &ak_all_d &ak_all_v   AS(F12) &caps_word      AS(K)         AS(H)     &td_comma &td_dot   AS(O)           AS(RET)
-&kp LCTRL   AS(Y)   &kp LGUI  &kp LG(LS(S)) &mt LALT ESC  &lt l_L SPACE  &kp BSPC     &kp DELETE  &lt l_R SPACE AS(FSLH)  &kp LEFT  &kp UP    &kp DOWN        &kp RIGHT
+&mt LCTRL RCTRL   AS(Y)   &kp LGUI  &kp LG(LS(S)) &mt LALT ESC  &lt l_L SPACE  &kp BSPC     &kp DELETE  &lt l_R SPACE AS(FSLH)  &kp LEFT  &kp UP    &kp DOWN        &kp RIGHT
     >;
 };
 
