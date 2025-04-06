@@ -11,7 +11,6 @@
         compatible = "zmk,behavior-adaptive-key";\
         #binding-cells = <0>;\
         bindings = <AS(key)>;\
-        // dead-keys = <LCTRL>; \
         akt_ctrl { trigger-keys = <LCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp f_key>;};\
     };
 // #define     my_hrm_config \
