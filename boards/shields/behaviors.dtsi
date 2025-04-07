@@ -259,11 +259,11 @@ behaviors {
 
     // Fkeys adaptive
 
-    ak_col_x: ak_col_x CTRL_F_MACRO(C, F18)
+    ak_col_x: ak_col_x CTRL_F_MACRO(X, F18)
     ak_hd_p: ak_hd_p CTRL_F_MACRO(P, F18)
     
     ak_col_c: ak_col_c CTRL_F_MACRO(C, F19)
-    ak_hd_l: ak_hd_l CTRL_F_MACRO(C, F19)
+    ak_hd_l: ak_hd_l CTRL_F_MACRO(L, F19)
 
     ak_all_w: ak_all_w CTRL_F_MACRO(W, F20)
     
