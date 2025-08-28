@@ -1,4 +1,4 @@
-default_layer {
+coding_layer {
         bindings = <
 &ss LSHFT LSHFT AS(Q) AS(W)     AS(F)     AS(P)     AS(B)                                   AS(J)  AS(L)     AS(U)      AS(Z)      &ak_apo      &as LC(G) LC(F)
 AS(TAB)         AS(A) AS(R)     AS(S)     AS(T)     AS(G)                                   AS(M)  &ak_col_n &ak_all_e  &ak_all_i  AS(O)        &as LC(RET) RET
@@ -8,7 +8,7 @@ AS(TAB)         AS(A) AS(R)     AS(S)     AS(T)     AS(G)                       
         >;
     };
 
-coding_layer1{
+writing_layer1{
         bindings = <
 &trans &trans &trans &trans &trans &trans       &trans &trans &trans         &trans &trans &trans
 &trans &trans &trans &trans &trans &trans       &trans &trans &trans         &trans &trans &trans
