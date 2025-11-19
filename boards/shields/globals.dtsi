@@ -37,3 +37,6 @@
 #define s_per LS(N5)
 #define s_que LS(MINUS)
 #define s_gra EQUAL
+#define s_slsh LS(N7)
+#define s_minus FSLH
+#define s_plus RBKT
