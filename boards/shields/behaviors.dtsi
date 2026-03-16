@@ -46,7 +46,7 @@ behaviors {
         hold-trigger-key-positions = <1>;    // <---[[the W key]]
     };
     
-    hd_l : handsdownlayer {
+    hd_l: handsdownlayer {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <400>;
