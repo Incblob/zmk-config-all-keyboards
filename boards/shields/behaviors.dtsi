@@ -35,7 +35,7 @@
 
 behaviors {
 
-        mtg: mod_tap_game {
+    mtg: mod_tap_game {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "tap-preferred";
@@ -45,6 +45,13 @@ behaviors {
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <1>;    // <---[[the W key]]
     };
+    
+    hd_l : handsdownlayer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <400>;
+            bindings = <&kp>, <&kp>;
+        };
 
     as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
