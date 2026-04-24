@@ -219,8 +219,7 @@ behaviors {
         bindings = <AS(G)>;
 
         akt_mg { trigger-keys = <M>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp L &kp G>; };
-        akt_kg { trigger-keys = <K>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; };
-        akt_jg { trigger-keys = <J>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp P &kp G>; }; //jpg
+        akt_kg { trigger-keys = <K>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; }; 
     };
 
     ak_j: ak_j { // expands GJ-> GTH, WJ->WL
