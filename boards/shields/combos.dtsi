@@ -29,7 +29,7 @@ COMBO_LAYER(ing, &macro_ing,     RM1  RM3,      <l_ALPHA l_CODE l_HD l_HD_CODE>)
 // H Digraphs 
 //
 COMBO_LAYER_L(sch, &macro_Sch,     LM1  LM2 LM3, <l_ALPHA l_CODE l_HD l_HD_CODE> ) // Sch
-COMBO_LAYER_L(sch, &macro_Sch,     LB1  LM2 LM3, <l_ALPHA l_CODE l_HD l_HD_CODE> ) // Sch
+COMBO_LAYER_L(sch, &macro_Sch_h,     LB1  LM2 LM3, <l_ALPHA l_CODE l_HD l_HD_CODE> ) // Sch
 COMBO_LAYER_L(tch, &macro_Tch,     LM2  LM3 LM4, <l_ALPHA l_CODE l_HD l_HD_CODE>) // Tch
 COMBO_LAYER_L(th,  &lk_th H T,     LM3  LM4,      <l_ALPHA l_CODE l_HD l_HD_CODE>) // Th/tion
 COMBO_LAYER_L(ch,  &macro_Ch,      LM2  LM3,      <l_ALPHA l_CODE l_HD l_HD_CODE>) // Ch
