@@ -7,12 +7,12 @@
 #define ALPHAS A B C D E F G H I J H K L M N O P Q R S T U V W X Y Z
 #define ALPHAS_S LS(A) LS(B) LS(C) LS(D) LS(E) LS(F) LS(G) LS(H) LS(I) LS(J) LS(H) LS(K) LS(L) LS(M) LS(N) LS(O) LS(P) LS(Q) LS(R) LS(S) LS(T) LS(U) LS(V) LS(W) LS(X) LS(Y) LS(Z)
 
-#define CTRL_F_MACRO(key, f_key)  {\
-        compatible = "zmk,behavior-adaptive-key";\
-        #binding-cells = <0>;\
-        bindings = <AS(key)>;\
-        akt_ctrl { trigger-keys = <RCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp f_key>;};\
-    };
+// #define CTRL_F_MACRO(key, f_key)  {\
+//         compatible = "zmk,behavior-adaptive-key";\
+//         #binding-cells = <0>;\
+//         bindings = <AS(key)>;\
+//         akt_ctrl { trigger-keys = <RCTRL>; max-prior-idle-ms = <fnc_idle_term>; bindings = <&kp f_key>;};\
+//     };
 // #define     my_hrm_config \
 //             compatible = "zmk,behavior-hold-tap"; \
 //             #binding-cells = <2>; \
@@ -222,6 +222,14 @@ behaviors {
         akt_kg { trigger-keys = <K>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp L>; }; 
     };
 
+        ak_w: ak_w { // MG -> LG,  KG -> KL, JPG macro, 
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(W)>;
+
+        akt_mg { trigger-keys = <M>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp P>; };
+    };
+
     ak_j: ak_j { // expands GJ-> GTH, WJ->WL
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
@@ -267,24 +275,24 @@ behaviors {
 
     // Fkeys adaptive
 
-    ak_col_x: ak_col_x CTRL_F_MACRO(X, F18)
-    ak_hd_p: ak_hd_p CTRL_F_MACRO(P, F18)
+//     ak_col_x: ak_col_x CTRL_F_MACRO(X, F18)
+//     ak_hd_p: ak_hd_p CTRL_F_MACRO(P, F18)
     
-    ak_col_c: ak_col_c CTRL_F_MACRO(C, F19)
-    ak_hd_l: ak_hd_l CTRL_F_MACRO(L, F19)
+//     ak_col_c: ak_col_c CTRL_F_MACRO(C, F19)
+//     ak_hd_l: ak_hd_l CTRL_F_MACRO(L, F19)
 
-    ak_all_w: ak_all_w CTRL_F_MACRO(W, F20)
+//     ak_all_w: ak_all_w CTRL_F_MACRO(W, F20)
     
-    ak_all_d: ak_all_d CTRL_F_MACRO(D, F21)
+//     ak_all_d: ak_all_d CTRL_F_MACRO(D, F21)
 
-    ak_all_v: ak_all_v CTRL_F_MACRO(V, F22)
-// Right side
-    ak_col_n: ak_col_n CTRL_F_MACRO(N, F23)
-    ak_hd_a: ak_hd_a CTRL_F_MACRO(A, F23)
+//     ak_all_v: ak_all_v CTRL_F_MACRO(V, F22)
+// // Right side
+//     ak_col_n: ak_col_n CTRL_F_MACRO(N, F23)
+//     ak_hd_a: ak_hd_a CTRL_F_MACRO(A, F23)
 
-    ak_all_e: ak_all_e CTRL_F_MACRO(E, F24)
+//     ak_all_e: ak_all_e CTRL_F_MACRO(E, F24)
     
-    ak_all_i: ak_all_i CTRL_F_MACRO(I, F17)
+//     ak_all_i: ak_all_i CTRL_F_MACRO(I, F17)
 
 
     // {
