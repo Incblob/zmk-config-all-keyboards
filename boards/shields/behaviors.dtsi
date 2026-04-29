@@ -278,7 +278,7 @@ behaviors {
         #binding-cells = <0>;
         bindings = <AS(R)>;
 
-        akt_vr { trigger-keys = <V>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp LS(R) >; };
+        akt_vr { trigger-keys = <V>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp LS(R) >; };
     };
 
     // Fkeys adaptive
