@@ -52,7 +52,7 @@ behaviors {
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             require-prior-idle-ms = <125>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&ak_r>;
         };
 
     as: auto_shift {
@@ -271,6 +271,14 @@ behaviors {
 
         akt_alpha {trigger-keys = <ALPHAS>; max-prior-idle-ms = <800>; bindings = <&kp LS(NON_US_HASH)>;};
         akt_bspc {trigger-keys = <BSPC>; max-prior-idle-ms = <300>; bindings = <&kp LS(NON_US_HASH)>;};
+    };
+
+    ak_r: ak_r { // GX->GT, MX->MB
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <AS(R)>;
+
+        akt_vr { trigger-keys = <V>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp LS(R) >; };
     };
 
     // Fkeys adaptive
