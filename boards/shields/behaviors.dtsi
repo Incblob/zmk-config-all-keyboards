@@ -282,10 +282,11 @@ behaviors {
     ak_vdr: ak_vdr { // GX->GT, MX->MB
         compatible = "zmk,behavior-adaptive-key";
         #binding-cells = <0>;
-        bindings = <LS(D)>;
+        bindings = <AS(D)>;
 
         akt_vr { trigger-keys = <V>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp LS(R) >; };
     };
+
 
     // Fkeys adaptive
 
