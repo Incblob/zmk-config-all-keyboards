@@ -96,6 +96,12 @@ behaviors {
                  , <AS(COMMA)>;
     };
 
+    // td_VtoR: td_VtoR {
+    //     TD_template;
+    //     bindings = <AS(V)>
+    //              , <&kp LS(R)>;
+    // };
+
     mt_comma: mt_comma {
             my_lk_config;
             bindings = <&semi_space>, <&comma_space>;
@@ -273,13 +279,13 @@ behaviors {
         akt_bspc {trigger-keys = <BSPC>; max-prior-idle-ms = <300>; bindings = <&kp LS(NON_US_HASH)>;};
     };
 
-    // ak_r: ak_r { // GX->GT, MX->MB
-    //     compatible = "zmk,behavior-adaptive-key";
-    //     #binding-cells = <0>;
-    //     bindings = <AS(R)>;
+    ak_vdr: ak_vdr { // GX->GT, MX->MB
+        compatible = "zmk,behavior-adaptive-key";
+        #binding-cells = <0>;
+        bindings = <LS(D)>;
 
-    //     akt_vr { trigger-keys = <V>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp LS(R) >; };
-    // };
+        akt_vr { trigger-keys = <V>; max-prior-idle-ms = <ak_idle_term>; bindings = <&kp BSPC &kp LS(R) >; };
+    };
 
     // Fkeys adaptive
 
