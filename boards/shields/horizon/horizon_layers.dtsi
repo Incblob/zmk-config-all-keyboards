@@ -21,7 +21,7 @@ writing_layer {
 &trans  AS(F12) &ak_w     &ak_m     &ak_g     &ak_j                                 &sk LSHFT &td_dot  &td_qu   AS(Y)   &trans   &trans
 &trans  &ak_x   &ak_c     AS(N)     AS(T)     &ak_k                                 &td_comma AS(A) AS(E)    AS(I)   AS(F)    &trans
 &trans  AS(S)   AS(P)     AS(L)  AS(D)     AS(V)      &trans    &trans           &ak_apo   &ak_u    AS(O)    AS(Z)   &ak_h   &trans
-&trans  &ak_b   &trans    &trans     &trans   &hd_l l_L  &trans    &mt LSHIFT DELETE &trans   &trans   &trans   &trans  &trans    &trans
+&trans  &ak_b   &trans    &trans     &trans   &hd_l l_L 0  &trans    &mt LSHIFT DELETE &trans   &trans   &trans   &trans  &trans    &trans
     >;
 };
 
