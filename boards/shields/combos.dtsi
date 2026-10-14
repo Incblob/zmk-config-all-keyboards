@@ -44,7 +44,7 @@ COMBO_LAYER_L(sh_h, &lk_sh H S,    LB1  LM2,      <l_ALPHA l_CODE l_HD l_HD_CODE
 COMBO_LAYER_L(sion_h,  &macro_sion,     LB1  LM2,      <l_R>) // sion
 
 COMBO_LAYER_L(gh,  &lk_gh H G,     LT3  LT4,      <l_HD l_HD_CODE>) // Gh/ght
-COMBO_LAYER_L(gh,  &macro_ght,     LT3  LT4,      <l_R>) // Gh/ght
+COMBO_LAYER_L(ght,  &macro_ght,     LT3  LT4,      <l_R>) // Gh/ght
 
 COMBO_LAYER_L(ph,  &macro_Ph,      LB2  LB3,      <l_HD l_HD_CODE>) // Ph
 };
